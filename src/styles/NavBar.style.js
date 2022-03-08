@@ -7,7 +7,7 @@ export const NavBarContainer = styled.nav`
   background-color: white;
   display: flex;
   flex-direction: column;
-  position: relative; // aded by @H
+  position: relative;
 `;
 
 export const LeftContainer = styled.div`
