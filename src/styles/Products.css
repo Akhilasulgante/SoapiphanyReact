@@ -1,0 +1,34 @@
+.product-img {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+}
+
+.soap-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.soap-des {
+  font: 24;
+}
+
+.soap-cart-text {
+  justify-items: baseline;
+  flex-direction: column;
+  height: auto;
+  display: flex;
+}
+
+.soap-cart-btn {
+  position: absolute;
+  background-color: blue;
+  text-align: right;
+  left: 90%;
+  object-position: 10px;
+}
+
+.soap-name {
+  display: flex;
+  font-style: bold;
+}
