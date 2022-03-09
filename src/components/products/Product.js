@@ -3,6 +3,8 @@ import "../../styles/Products.css";
 import Cartitems from "./Cartitems";
 import ProductIndividual from "./ProductIndividual";
 import { Link } from "react-router-dom";
+import Popup from "../../Popup";
+import "../../../src/Style.css";
 
 class Product extends Component {
   constructor(props) {
@@ -122,8 +124,16 @@ class Product extends Component {
         },
       ],
       cartData: [],
+      isOpen: false,
     };
     this.addItemToCart = this.addItemToCart.bind(this);
+    this.togglePopup = this.togglePopup.bind(this);
+  }
+
+  togglePopup() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
   }
 
   addItemToCart(val) {
@@ -144,14 +154,38 @@ class Product extends Component {
 
         <Link to={<Cartitems />}>Cart</Link> */}
 
-        <button
-          onclick={this.state.cartData.map((e) => {
-            console.log("Clicking?");
-            return <Cartitems arr={e} />;
-          })}
-        >
-          Cart
-        </button>
+        <button onClick={() => this.togglePopup()}>Cart</button>
+        {this.state.isOpen && (
+          <Popup
+            content={
+              <>
+                {/* <b>Design your Popup</b>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <button>Test button</button> */}
+
+                {this.state.cartData.length > 0 ? (
+                  this.state.cartData.map((e) => {
+                    return <Cartitems cartObj={e} />;
+                  })
+                ) : (
+                  <h1 className="empty-cart">
+                    The cart is empty, please shop with us
+                  </h1>
+                )}
+              </>
+            }
+            handleClose={() => this.togglePopup()}
+          />
+        )}
         <div>
           {this.state.sopaData.map((e) => {
             return (

@@ -32,3 +32,17 @@
   display: flex;
   font-style: bold;
 }
+
+.cart-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.empty-cart {
+  text-align: center;
+}
