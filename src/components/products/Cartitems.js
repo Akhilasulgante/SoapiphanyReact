@@ -19,7 +19,7 @@ class Cartitems extends Component {
   }
 
   render() {
-    const { soapPrice, soapImgUrl, SoapDes } = this.props.cartObj;
+    const { soapPrice, soapImgUrl, soapName } = this.props.cartObj;
     return (
       <div className="cart-details">
         <div>
@@ -28,7 +28,7 @@ class Cartitems extends Component {
 
         <div>
           <p>{soapPrice}</p>
-          <p>{SoapDes}</p>
+          <p>{soapName}</p>
         </div>
       </div>
     );

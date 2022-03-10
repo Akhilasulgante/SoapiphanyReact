@@ -11,18 +11,17 @@ export const NavBarContainer = styled.nav`
 `;
 
 export const LeftContainer = styled.div`
-  flex: 70%;
+  flex: 50%;
   display: flex;
-  align-items: center;
-  padding-left: 5%;
+  align-items: left;
   //background-color: red;
 `;
 
 export const RightContainer = styled.div`
-  flex: 30%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
+  flex: 50%;
+  display: table-footer-group;
+  justify-content: flex-start;
+  padding-left: 10px;
   position: relative;
   //background-color: green;
 `;
