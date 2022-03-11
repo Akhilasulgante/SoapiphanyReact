@@ -24,6 +24,7 @@ class NavBar extends Component {
               <NavBarLink to="/">Home</NavBarLink>
               <NavBarLink to="/products">products</NavBarLink>
               <NavBarLink to="/about">About us</NavBarLink>
+              <NavBarLink to="/stories">stories</NavBarLink>
             </NavBarLinkContainer>
           </RightContainer>
         </NavBarInnerContainer>
