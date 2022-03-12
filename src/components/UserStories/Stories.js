@@ -1,13 +1,28 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
+import PropTypes from "prop-types";
 
-class Stories extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
-  //   state = {};
+export default class Stories extends Component {
+  constructor(props) {
+    super(props);
 
-  createStories() {
-    this.addStories();
+    this.storyForm = createRef();
+
+    this.onCreateStories = this.onCreateStories.bind(this);
+  }
+
+  onCreateStories(e) {
+    console.log("adding?");
+    //this.addStories();
+    e.preventDefault();
+
+    const stoForm = new FormData(this.storyForm.current);
+
+    console.log("create Publication title=", stoForm.get("title"));
+
+    let soapName = stoForm.get("soapName"),
+      soapStory = stoForm.get("soapStory");
+
+    this.props.onCreateStories(soapName, soapStory);
   }
 
   render() {
@@ -15,19 +30,20 @@ class Stories extends Component {
       <React.Fragment>
         <h2>Share your stories with soap making</h2>
         <label>Soap Name</label>
-        <form>
-          <input type="text" />
+        <form ref={this.storyForm}>
+          <input type="text" name="soapName" />
+          <br />
+          <input type="text" name="soapStory" />
 
-          <input type="submit" value="Add" />
+          <button type="submit" onClick={this.onCreateStories}>
+            Share
+          </button>
         </form>
-        {/* remove this later */}
-        {/* <br />
-        <br />
-        <label>experience</label>
-        <input type="text" /> <br /> */}
       </React.Fragment>
     );
   }
 }
 
-export default Stories;
+Stories.propTypes = {
+  onCreateStories: PropTypes.func.isRequired,
+};

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import About from "./components/AboutUs/About";
 import Product from "./components/products/Product";
 import Stories from "./components/UserStories/Stories";
+import Storiest from "./components/UserStories/Storiest";
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Product />} />
           <Route path="/about" element={<About />} />
-          <Route path="/stories" element={<Stories />} />
+          <Route path="/stories" element={<Storiest />} />
         </Routes>
       </Router>
     );
