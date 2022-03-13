@@ -5,6 +5,7 @@
 }
 
 .soap-list {
+  gap: 10px;
   display: flex;
   flex-direction: row;
 }
@@ -22,7 +23,6 @@
 
 .soap-cart-btn {
   position: absolute;
-  background-color: blue;
   text-align: right;
   left: 90%;
   object-position: 10px;
@@ -30,7 +30,7 @@
 
 .soap-name {
   display: flex;
-  font-style: bold;
+  font-weight: bolder;
 }
 
 .cart-img {
@@ -48,4 +48,17 @@
 }
 
 .customize {
+  display: flex;
+  object-fit: cover;
+  border-style: dotted;
+  height: 250px;
+}
+
+.cart-button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

@@ -29,7 +29,7 @@ class ProductIndividual extends Component {
         <div>
           <p className="soap-name">{soapName}</p>
           <p className="soap-des">{SoapDes}</p>
-          <h3>{soapPrice}</h3>
+          <p>{soapPrice}</p>
         </div>
         <div className="soap-cart-btn">
           <button className="soap-cart-text" onClick={this.addToCart} id={id}>

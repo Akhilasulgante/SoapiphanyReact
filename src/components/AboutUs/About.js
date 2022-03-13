@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../styles/About.css";
-//import logo from "../../images/logo.png";
 
 class About extends Component {
   state = {};
@@ -38,6 +37,11 @@ class About extends Component {
           <p>
             Soapiphany aims to provide the highest quality Artisan soaps to all
             its consumers
+          </p>
+          <h4>Our Vision</h4>
+          <p>
+            Making a little difference at a time to make earth free of harmful
+            chemicals
           </p>
         </div>
       </React.Fragment>

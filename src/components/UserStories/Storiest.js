@@ -5,87 +5,87 @@ class Storiest extends Component {
 
   constructor(props) {
     super(props);
-
-    //let comments = JSON.parse(localStorage.getItem("user"));
-
     this.state = {
-      comments: [
-        {
-          SName: "",
-          SStory: "",
-        },
-      ],
+      SName: "",
+      SStory: "",
     };
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeStory = this.onChangeStory.bind(this);
+    this.submitData = this.submitData.bind(this);
   }
 
   onChangeName = (event) => {
-    //console.log("calling?");
     this.setState({ SName: event.target.value });
   };
 
   onChangeStory = (event) => {
-    //console.log("calling?");
     this.setState({ SStory: event.target.value });
   };
 
-  handleFormSubmit(event) {
-    event.preventDefault();
-    this.userComment = JSON.parse(localStorage.getItem("user"));
-    console.log(this.userComment);
-    console.log("Calling?");
-  }
-  componentDidMount() {
-    localStorage.setItem("comments", JSON.stringify("user"));
-    // if (localStorage.getItem("user")) {
-    //   this.setState({
-    //     SName: this.userData.SName,
-    //     SStory: this.userData.SStory,
-    //   });
-    // } else {
-    //   alert("Please input all feilds");
-    // }
-  }
+  submitData = () => {
+    let commentsArr = JSON.parse(localStorage.getItem("comments-data"));
+    console.log("commentsArr", typeof commentsArr);
+    commentsArr.push({
+      SName: this.state.SName,
+      Story: this.state.SStory,
+    });
 
-  componentDidUpdate(nextProps, nextState) {
-    localStorage.setItem("user", JSON.stringify(nextState));
-  }
+    localStorage.setItem("comments-data", JSON.stringify(commentsArr));
+
+    this.setState({
+      SName: "",
+      SStory: "",
+    });
+  };
 
   render() {
+    let arr = JSON.parse(localStorage.getItem("comments-data"));
+    console.log("arr type is", Object.keys(arr).length);
     return (
       <React.Fragment>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>SoapName</label>
-          <br />
-          <input
-            type="text"
-            name="SName"
-            value={this.state.SName}
-            onChange={this.onChangeName}
-          />
-          <br />
-          <label>Story</label>
-          <br />
-          <input
-            type="text"
-            name="SStory"
-            value={this.state.SStory}
-            onChange={this.onChangeStory}
-          />
-          <button type="submit">Submit</button>
-        </form>
+        <h1 style={{ textAlign: "center" }}>
+          Please join our community by sharing your stories or feedback
+        </h1>
+        <label>Soap name</label>
+        <br />
+        <input
+          type="text"
+          name="SName"
+          value={this.state.SName}
+          onChange={(e) => this.onChangeName(e)}
+        />
+        <br />
+        <br />
+        <label>Story/feedback</label>
+        <br />
+        <input
+          type="text"
+          name="SStory"
+          value={this.state.SStory}
+          onChange={(e) => this.onChangeStory(e)}
+        />
+        <button onClick={() => this.submitData()}>Submit</button>
         <br />
         <br />
         <br />
         <div>
-          <label>Feedback</label>
+          <label>User's echo</label>
           <br />
-          <label>Name :</label>
-          <h5>{localStorage.getItem("user.SName")}</h5>
-          <label>STory :</label>
-          <p>{localStorage.getItem("user.SStory")}</p>
+          {arr.map((e) => {
+            return (
+              <div>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  <p>Name: </p>
+                  <p>{e.SName}</p>
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  <p>Comment: </p>
+                  <p>{e.Story}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </React.Fragment>
     );

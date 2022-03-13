@@ -2,9 +2,20 @@ import React, { Component } from "react";
 import "../../styles/Products.css";
 import Cartitems from "./Cartitems";
 import ProductIndividual from "./ProductIndividual";
-import { Link } from "react-router-dom";
 import Popup from "../../Popup";
 import "../../../src/Style.css";
+import WineSoap from "../../images/WineSoap.png";
+import ClaySoap from "../../images/ClaySoap.png";
+import CinaSoap from "../../images/CinaSoap.png";
+import CoffTeaSoap from "../../images/CoffTeaSoap.png";
+import OceanSoap from "../../images/OceanSoap.png";
+import MacronSoap from "../../images/MacronSoap.png";
+import WaterMelonSoap from "../../images/WaterMelonSoap.png";
+import HoneylemonSoap from "../../images/HoneylemonSoap.png";
+import RainbowSoap from "../../images/RainbowSoap.png";
+import LavenderSoap from "../../images/LavenderSoap.png";
+import GradientSoap from "../../images/GradientSoap.png";
+import BtsSoap from "../../images/BtsSoap.png";
 
 class Product extends Component {
   constructor(props) {
@@ -14,20 +25,18 @@ class Product extends Component {
       soapData: [
         {
           id: "0",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Goat milk Gradient soap",
+          soapPrice: "$10.99",
+          soapImgUrl: WineSoap,
+          soapName: "Wine Soap with golden goodness",
           SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits, will it go furthur by writng some crap",
+            "With its Anti-oxidant property, wine soap helps in anti-aging and firmness of the skin.",
         },
 
         {
           id: "1",
           soapPrice: "$12.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Honey soap",
+          soapImgUrl: ClaySoap,
+          soapName: "Clay soap",
           SoapDes:
             "with goodness of ash clay, this soap contains skin softening benefits",
         },
@@ -35,92 +44,75 @@ class Product extends Component {
         {
           id: "2",
           soapPrice: "$10.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
+          soapImgUrl: CinaSoap,
           soapName: "Cinnamon roll soaps with coffee exfoliation",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          SoapDes: "A little coffee, a lot cinnamon frangrance for your skin",
         },
         {
           id: "3",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
+          soapPrice: "$15.99",
+          soapImgUrl: CoffTeaSoap,
+          soapName: "Coffee and Tea exfoliation bar",
           SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+            "Wake your skin very morning with tea and coffee exfoliation bar",
         },
         {
           id: "4",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$12.99",
+          soapImgUrl: OceanSoap,
+          soapName: "OceanSoap",
+          SoapDes: "Feel refreshed with methonal, its like a ocean in a bar",
         },
         {
           id: "5",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
+          soapPrice: "$9.99",
+          soapImgUrl: MacronSoap,
+          soapName: "Macron Soaps",
           SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+            "with vanilla fragrance, these tiny hand soaps make the perfect gift",
         },
         {
           id: "6",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
+          soapPrice: "$13.99",
+          soapImgUrl: WaterMelonSoap,
+          soapName: "Watermelon Soaps",
           SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+            "Not just look like watermelon, but smells the same and exfolites with watermelon seeds",
         },
         {
           id: "7",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$14.99",
+          soapImgUrl: HoneylemonSoap,
+          soapName: "Honey Lemon Soap",
+          SoapDes: "A set of honey and lemon soap to keep your skin hydrated",
         },
         {
           id: "8",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$10.99",
+          soapImgUrl: RainbowSoap,
+          soapName: "Oat milk Rainbow Soap",
+          SoapDes: "Soap made with oat milk, treat to your skin and eye",
         },
         {
           id: "9",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$11.99",
+          soapImgUrl: LavenderSoap,
+          soapName: "Lavender Swirl soap",
+          SoapDes: "with goodness of lavender, to calm your skin",
         },
         {
           id: "10",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$13.99",
+          soapImgUrl: GradientSoap,
+          soapName: "Gradient Soaps",
+          SoapDes: "Gifting soaps made with goat milk and glycerin",
         },
         {
           id: "11",
-          soapPrice: "$100.99",
-          soapImgUrl:
-            "https://images.squarespace-cdn.com/content/v1/57c62708ff7c50afee77ffb0/1596721995990-KAOJN5TDWQ8ODBWVYEI5/IMG_2047.jpg?format=1500w",
-          soapName: "Soap A",
-          SoapDes:
-            "with goodness of ash clay, this soap contains skin softening benefits",
+          soapPrice: "$54.99",
+          soapImgUrl: BtsSoap,
+          soapName: "BTS Themed Soaps",
+          SoapDes: "For the BTS fan in you, BTS themed curated soaps",
         },
       ],
       cartData: [],
@@ -133,6 +125,7 @@ class Product extends Component {
     this.togglePopup = this.togglePopup.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.calculateCost = this.calculateCost.bind(this);
+    this.buyNow = this.buyNow.bind(this);
   }
 
   togglePopup() {
@@ -206,6 +199,10 @@ class Product extends Component {
     }
   }
 
+  buyNow() {
+    alert("Thank you for shopping with us");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -213,7 +210,9 @@ class Product extends Component {
 
         <Link to={<Cartitems />}>Cart</Link> */}
 
-        <button onClick={() => this.togglePopup()}>Cart</button>
+        <button className="cart-button" onClick={() => this.togglePopup()}>
+          Cart
+        </button>
         {this.state.isOpen && (
           <Popup
             content={
@@ -232,14 +231,22 @@ class Product extends Component {
             handleClose={() => this.togglePopup()}
           />
         )}
-        <div>
+        <div className="customize">
           <form>
+            <h3>Customize with us:</h3>
+            <h5>
+              Let us know your color and shape choice for our Shea butter Soaps
+            </h5>
+            <br />
+            <label>Please pick a color:</label>
             <input
               type="color"
               name="sColor"
               value={this.state.sColor}
               onChange={(e) => this.handleChange(e, "sColor")}
             />
+            <br />
+            <label>Please pick a Shape:</label>
             <select
               name="shapes"
               id="shapes"
@@ -251,8 +258,15 @@ class Product extends Component {
               <option value="rectangle">Rectangle</option>
               <option value="square">square</option>
             </select>
-
+            <br />
+            <label>Your Cost will be: </label>
             <label>{this.calculateCost(this.state.sObj)}</label>
+
+            <div className="soap-cart-btn">
+              <button className="soap-cart-text" onClick={this.buyNow}>
+                Buy now
+              </button>
+            </div>
           </form>
         </div>
         <div>

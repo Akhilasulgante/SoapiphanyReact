@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/AboutUs/About";
 import Product from "./components/products/Product";
-import Stories from "./components/UserStories/Stories";
 import Storiest from "./components/UserStories/Storiest";
 
 class App extends Component {

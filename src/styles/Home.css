@@ -1,1 +1,31 @@
+.homeimagesleft {
+  float: left;
+  height: 500px;
+  width: 900px;
+}
 
+.hometextright {
+  text-align: center;
+  font-style: italic;
+  font-size: xx-large;
+}
+
+.NaturalImage {
+  float: right;
+  height: 500px;
+  width: 1450px;
+}
+
+.homeimagesRight {
+  float: right;
+  height: 500px;
+  width: 900px;
+}
+
+.NaturText {
+  position: relative;
+  align-items: flex-start;
+  text-align: left;
+  float: left;
+  /* display: flex; */
+}
