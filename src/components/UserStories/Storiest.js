@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 
+/**
+ * [Demonstrate local storage in react]
+ */
 class Storiest extends Component {
   userComment;
 
+  /**
+   * [Initializing state properties and binding]
+   *
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -14,14 +21,27 @@ class Storiest extends Component {
     this.submitData = this.submitData.bind(this);
   }
 
+  /**
+   * [Stores value SName from the input text on change of an event]
+   *
+   * @param   {array}  event  [On change, text input]
+   */
   onChangeName = (event) => {
     this.setState({ SName: event.target.value });
   };
 
+  /**
+   * [Stores value SStory from the input text on change of an event]
+   *
+   * @param   {array}  event  [On change, text input]
+   */
   onChangeStory = (event) => {
     this.setState({ SStory: event.target.value });
   };
 
+  /**
+   * [Sets and gets object array from local storage and stores the values]
+   */
   submitData = () => {
     let commentsArr = JSON.parse(localStorage.getItem("comments-data"));
     console.log("commentsArr", typeof commentsArr);

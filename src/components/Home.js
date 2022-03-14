@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "../styles/Home.css";
 import Natural from "../../src/images/Natural.png";
 
+/**
+ * This class is just a view class for the website homepage
+ */
 class Home extends Component {
   componentDidMount() {
     let arr = localStorage.getItem("comments-data");

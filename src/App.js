@@ -7,6 +7,9 @@ import About from "./components/AboutUs/About";
 import Product from "./components/products/Product";
 import Storiest from "./components/UserStories/Storiest";
 
+/**
+ * [Routing refernece to tabs]
+ */
 class App extends Component {
   render() {
     return (

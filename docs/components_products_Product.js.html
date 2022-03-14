@@ -1,4 +1,32 @@
-import React, { Component } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/products/Product.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/products/Product.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from "react";
 import "../../styles/Products.css";
 import Cartitems from "./Cartitems";
 import ProductIndividual from "./ProductIndividual";
@@ -233,79 +261,102 @@ class Product extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <button className="cart-button" onClick={() => this.togglePopup()}>
+      &lt;React.Fragment>
+        &lt;button className="cart-button" onClick={() => this.togglePopup()}>
           Cart
-        </button>
-        {this.state.isOpen && (
-          <Popup
+        &lt;/button>
+        {this.state.isOpen &amp;&amp; (
+          &lt;Popup
             content={
-              <>
+              &lt;>
                 {this.state.cartData.length > 0 ? (
                   this.state.cartData.map((e) => {
-                    return <Cartitems cartObj={e} />;
+                    return &lt;Cartitems cartObj={e} />;
                   })
                 ) : (
-                  <h1 className="empty-cart">
+                  &lt;h1 className="empty-cart">
                     The cart is empty, please shop with us
-                  </h1>
+                  &lt;/h1>
                 )}
-              </>
+              &lt;/>
             }
             handleClose={() => this.togglePopup()}
           />
         )}
-        <div className="customize">
-          <form>
-            <h3>Customize with us:</h3>
-            <h5>
+        &lt;div className="customize">
+          &lt;form>
+            &lt;h3>Customize with us:&lt;/h3>
+            &lt;h5>
               Let us know your color and shape choice for our Shea butter Soaps
-            </h5>
-            <br />
-            <label>Please pick a color:</label>
-            <input
+            &lt;/h5>
+            &lt;br />
+            &lt;label>Please pick a color:&lt;/label>
+            &lt;input
               type="color"
               name="sColor"
               value={this.state.sColor}
               onChange={(e) => this.handleChange(e, "sColor")}
             />
-            <br />
-            <label>Please pick a Shape:</label>
-            <select
+            &lt;br />
+            &lt;label>Please pick a Shape:&lt;/label>
+            &lt;select
               name="shapes"
               id="shapes"
               value={this.state.sShapes}
               onChange={(e) => this.handleChange(e, "sShapes")}
             >
-              <option value="">Please Select an option</option>
-              <option value="circle">circle</option>
-              <option value="rectangle">Rectangle</option>
-              <option value="square">square</option>
-            </select>
-            <br />
-            <label>Your Cost will be: </label>
-            <label>{this.calculateCost(this.state.sObj)}</label>
+              &lt;option value="">Please Select an option&lt;/option>
+              &lt;option value="circle">circle&lt;/option>
+              &lt;option value="rectangle">Rectangle&lt;/option>
+              &lt;option value="square">square&lt;/option>
+            &lt;/select>
+            &lt;br />
+            &lt;label>Your Cost will be: &lt;/label>
+            &lt;label>{this.calculateCost(this.state.sObj)}&lt;/label>
 
-            <div className="soap-cart-btn">
-              <button className="soap-cart-text" onClick={this.buyNow}>
+            &lt;div className="soap-cart-btn">
+              &lt;button className="soap-cart-text" onClick={this.buyNow}>
                 Buy now
-              </button>
-            </div>
-          </form>
-        </div>
-        <div>
+              &lt;/button>
+            &lt;/div>
+          &lt;/form>
+        &lt;/div>
+        &lt;div>
           {this.state.soapData.map((e) => {
             return (
-              <ProductIndividual
+              &lt;ProductIndividual
                 soapObj={e}
                 addItemToCart={this.addItemToCart}
               />
             );
           })}
-        </div>
-      </React.Fragment>
+        &lt;/div>
+      &lt;/React.Fragment>
     );
   }
 }
 
 export default Product;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="About.html">About</a></li><li><a href="App.html">App</a></li><li><a href="Cartitems.html">Cartitems</a></li><li><a href="Home.html">Home</a></li><li><a href="NavBar.html">NavBar</a></li><li><a href="Product.html">Product</a></li><li><a href="ProductIndividual.html">ProductIndividual</a></li><li><a href="Storiest.html">Storiest</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Mar 13 2022 19:15:56 GMT-0700 (Pacific Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

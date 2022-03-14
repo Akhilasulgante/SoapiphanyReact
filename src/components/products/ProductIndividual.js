@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import "../../styles/Products.css";
 
+/**
+ * This class is a view component for product
+ */
 class ProductIndividual extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       cart: [],
-  //     };
-  //   }
-
+  /**
+   * [addToCart description]
+   *
+   * @param   {object}  event  [on click]
+   *
+   */
   addToCart = (event) => {
     console.log("button was clicked", event.target.id);
-    //   this.setState(cart:[...this.state.cart, item];
-    //   });
     alert("added");
     this.props.addItemToCart(event.target.id);
   };

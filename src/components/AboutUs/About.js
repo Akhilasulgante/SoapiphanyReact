@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import "../../styles/About.css";
 
+/**
+ * Class About - Displays Company information in About US tab on NavBar
+ */
 class About extends Component {
   state = {};
+  /**
+   * Component displays About, mission and vision of the company
+   *
+   * @return  {array}  [Returns HTML code to display information]
+   */
   render() {
     return (
       <React.Fragment>
